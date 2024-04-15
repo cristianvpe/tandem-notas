@@ -15,7 +15,7 @@ body {
   .container {
     display: flex;
     flex-direction: column; /* Organiza los elementos verticalmente */
-    width: 600px; /* Define el ancho del contenedor */
+    width: 1000px; /* Define el ancho del contenedor */
     margin: 0 auto; /* Centra el contenedor horizontalmente */
     padding: 20px;
     border: 1px solid #ddd; /* Añade un borde para delimitar el contenedor */
@@ -73,6 +73,7 @@ body {
     height: 200px;
     flex: 0 0 200px;
     margin:10px;
+    word-break: break-all;
   }
   
   label {
