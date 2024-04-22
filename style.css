@@ -1,93 +1,34 @@
-/* Estilos para Tandem Notas */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0; /* Elimina el margen predeterminado del body */
-    padding: 20px; /* Añade padding para separar el contenido del borde */
-  }
-  
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 20px; /* Añade espacio entre el título y el contenido */
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column; /* Organiza los elementos verticalmente */
-    width: 1000px; /* Define el ancho del contenedor */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-    padding: 20px;
-    border: 1px solid #ddd; /* Añade un borde para delimitar el contenedor */
-    border-radius: 5px; /* Aplica bordes redondeados */
-  }
-  
-  .nota {
-    padding: 10px;
-    border: 1px solid #ccc; /* Añade un borde al div de la nota */
-    border-radius: 5px; /* Aplica bordes redondeados */
-    min-height: 100px; /* Define una altura mínima para la nota */
-  }
-  
-  button {
-    padding: 10px 20px;
-    margin: 5px; /* Añade margen entre los botones */
-    border: none;
-    border-radius: 5px; /* Aplica bordes redondeados a los botones */
-    cursor: pointer;
-  }
-  
-  #btn-add-nota {
-    background-color: #007bff; /* Azul */
-    color: white;
-  }
-  
-  #btn-clean-nota {
-    background-color: #dc3545; /* Rojo */
-    color: white;
-  }
-  
-  #show-notas {
-    margin-top: 20px; /* Añade margen superior a la sección de notas */
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    display: flex; /* Activa el modo flexbox */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias filas */
-    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
-    align-items: flex-start;
-  }
-  
-  .no-nota {
-    text-align: center;
-    color: #ccc; /* Color gris claro para el texto sin notas */
-  }
-  
-  .lista-notas { /* Clase para las notas guardadas (añadida) */
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #d7e760; /* Gris claro para las notas */
-    width: 200px;
-    height: 200px;
-    flex: 0 0 200px;
-    margin:10px;
-    word-break: break-all;
-  }
-  
-  label {
-    margin-top: 20px; /* Añade margen superior a la etiqueta de fecha y hora */
-    display: block; /* Muestra la etiqueta en una línea propia */
-  }
-  
-  #datetime-input {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  #mostrar-notas { /* Elemento oculto para mostrar notas (opcional) */
-    display: none; /* Oculta el elemento por defecto */
-  }
-  
+*{
+  margin: 0;
+  padding:0;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(24, 193, 160);
+}
+.container{
+  max-width: 960px;
+  margin:0 auto;
+  padding:1em;
+  text-align:center;
+}
+.nota, .lista-notas{
+  font-family: monospace;
+  font-size:2rem;
+  padding:.5em;
+  background-color:yellow;
+  display:blocK;
+  width:150px;
+  height: 150px;
+  text-align:center;
+  box-shadow: 6px 6px 12px;
+  margin:1em auto;
+}
+#show-notas{
+  min-width: 75%;
+  background-color: aqua;
+  min-height:200px;
+  display:block;
+  display:flex;
+  flex-wrap: wrap;
+}
