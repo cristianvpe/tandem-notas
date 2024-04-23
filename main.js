@@ -87,7 +87,17 @@ function templateNota(){
       localStorage.setItem(clave,getInfo(nota))
        
     }
-    
+
+    // funcion eliminar nota
+    function eliminarNota(clave){
+        localStorage.removeItem(clave)
+        showInfo()
+    }
+    // funcion editar nota
+    function editarNota(clave){
+        const elemento = document.getElementById(clave)
+        elemento.contentEditable=true
+    }
     // leerla y sacarla por pantalla
     function showInfo(){
         // leerla y mostrarla por pantalla
@@ -96,10 +106,11 @@ function templateNota(){
         document.getElementById('show-notas').innerHTML= ''
         for (let index = 0; index < localStorage.length; index++) {
             let clave = localStorage.key(index)
-            let valor = localStorage[clave]
-            console.log(valor)  
+            let valor = localStorage[clave]  
             let elemento = `
-            <div class='lista-notas'>
+            <div id="${clave} "class='lista-notas'>
+            <button onclick = 'eliminarNota(${clave})'><i class="bi bi-trash-fill"></i> </button>
+            <button onclick = 'editarNota()'> <i class="bi bi-pen-fill"></i> </button>
             ${valor}
             </div>
             `
